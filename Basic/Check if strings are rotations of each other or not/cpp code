@@ -1,10 +1,19 @@
- if(s1.length() != s2.length()) return false;
-        String str = s1;
-        for(int i=0 ; i<s1.length() ; i++)
-        {
-            if(str.equals(s2)) return true;
-            str += s1.charAt(i);
-            str = str.substring(1,str.length());
-        }
+class Solution
+{
+    public:
+    //Function to check if two strings are rotations of each other or not.
+    bool areRotations(string s1,string s2)
+    {
+        // Your code here
+         if(s1.length() != s2.length()) return false;
+         string st = s1;
+         for(int i=0 ; i<s1.length() ; i++)
+         {
+             if(st == s2 ) return true;
+             st += s1[i];
+             st = st.substr(1,st.length());
+         }
         
         return false;
+    }
+};
