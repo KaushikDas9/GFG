@@ -46,7 +46,6 @@ class Solution
     public static boolean areRotations(String s1, String s2 )
     {
         // Your code here
-        // s1 += s1;
         if(s1.length() != s2.length()) return false;
         String str = s1;
         for(int i=0 ; i<s1.length() ; i++)
@@ -54,7 +53,6 @@ class Solution
             if(str.equals(s2)) return true;
             str += s1.charAt(i);
             str = str.substring(1,str.length());
-            // System.out.println(str);
         }
         
         return false;
