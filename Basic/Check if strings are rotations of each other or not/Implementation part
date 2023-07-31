@@ -1,0 +1,13 @@
+
+ string st = s1.substr(i,s2.length());  
+
+This funtion works like that :
+           
+st : geeksforgeeks
+st : eeksforgeeksg
+st : eksforgeeksge
+st : ksforgeeksgee
+st : sforgeeksgeek
+st : forgeeksgeeks
+
+then true and return .
