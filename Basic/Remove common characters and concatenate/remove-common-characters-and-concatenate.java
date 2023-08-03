@@ -35,8 +35,8 @@ class Solution
         for(int i=0; i<store.length(); i++)
         {
             String temp = String.valueOf(store.charAt(i));
-            // System.out.println(temp);
-            if((s1.contains(temp)) && (s2.contains(temp)) ){}else ans += temp;
+           
+            if((!s1.contains(temp)) || (!s2.contains(temp)) ) ans += temp;
         }
         
         if(ans.length()==0) return "-1";
