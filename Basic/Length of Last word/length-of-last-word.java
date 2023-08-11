@@ -23,22 +23,13 @@ class Solution
     int findLength(String s) 
     { 
         // code here
-        // int count =0 ;
-        // for( int i=s.length()-1;i>=0;i-- ) {
+         s = s.trim();
+        int count =0 ;
+        for( int i=s.length()-1;i>=0;i-- ) {
             
-        //     if(s.charAt(i) == ' ' ) return count;
-        //     count++;
-            
-        // }
-        //   return count; 
-        s = s.trim();
-        StringBuilder sb = new StringBuilder();
-        
-        for(int i = s.length()-1;i>=0;i--){
-            if(s.charAt(i)==' ')
-                break;
-            sb.append(s.charAt(i));
+            if(s.charAt(i) == ' ' ) return count;
+            count++;            
         }
-        return sb.length();
+          return count; 
     }
 }
