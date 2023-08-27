@@ -49,7 +49,7 @@ class Solution{
         int ans = 0;  
         for( int i=0;i<n;i++ ) {
             ans += arr[i];
-            if(set.contains(ans) || ans==0 || arr[i]==0) return true;
+            if(set.contains(ans) || ans==0 ) return true;
             else set.add(ans);
         }
         return false;
