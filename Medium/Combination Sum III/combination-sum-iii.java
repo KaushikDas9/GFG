@@ -57,15 +57,14 @@ class GFG {
 class Solution {
     
     public static void find(int n ,int k , ArrayList<Integer> ds, int tar , ArrayList<ArrayList<Integer>> ans) {
-        
+         if( n == 11 ||  tar < 0 || k < 0  ) return ;
        
         if( tar==0 && k==0 ) {
             
-          
             ans.add( new ArrayList<Integer>(ds));
             return;
         }
-           if( n == 10 ||  tar < 0 || k < 0  ) return ;
+          
           
         
         ds.add(n);
