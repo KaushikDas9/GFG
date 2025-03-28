@@ -20,32 +20,32 @@ class Geeks {
 // } Driver Code Ends
 
 
-// User function Template for Java
-
 class Solution {
     
-    public static int find ( int i,int j,int[] arr,Integer[][] dp ) { 
+    public static int find( int i,int j,int[] arr,Integer[][] dp ) { 
         
-        if( i==j ) return 0;
-        if( dp[i][j]!=null ) return dp[i][j];
-            
-        int ans = (int)(10e9);
+        if ( i==j ) return 0;
+        if( dp[i][j] != null ) return dp[i][j];
         
-        for( int k=i;k<j;k++ ) { 
+        int mini = (int)1e9;
+        for ( int k=i;k<j;k++ ) { 
             
-            ans =Math.min(ans, ((arr[i-1]*arr[k]*arr[j]) + find( i,k,arr,dp ) + find(k+1,j,arr,dp))) ;
-            
+            int step = arr[i-1]*arr[k]*arr[j] + 
+                    find( i,k,arr,dp ) + find( k+1,j,arr,dp ) ;
+                    
+            mini = Math.min(mini,step);
         }
         
-        return dp[i][j]=ans;
+        return dp[i][j]=mini;
+        
     }
     
     static int matrixMultiplication(int arr[]) {
-        // code here
         
-        int n = arr.length;
-        Integer[][] dp = new Integer[n][n];
-        return find(1,n-1,arr,dp);
-        
+        Integer[][] dp = new Integer[arr.length][arr.length];
+        return find(1,arr.length-1,arr,dp);
     }
+    
+    
+    
 }
